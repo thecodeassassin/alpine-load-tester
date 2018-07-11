@@ -6,7 +6,7 @@ Based on boom (https://github.com/tarekziade/boom)
 
 # Usage
 
-docker run thecodeassassin/boom -n 50 https://google.nl 
+docker run thecodeassassin/alpine-load-tester -n 50 https://google.nl 
 
 ## CI/CD environments
 
@@ -17,7 +17,7 @@ Example:
 
 ```
 echo "Testing https://google.nl"
-docker run thecodeassassin/boom -n 50 https://google.nl | jq -e -r '.avg < 0.20'
+docker run thecodeassassin/alpine-load-tester -n 50 https://google.nl | jq -e -r '.avg < 0.20'
 ```
 
 This command will return an exit code 1 if the condition has not been met.
